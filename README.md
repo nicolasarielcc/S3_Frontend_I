@@ -61,6 +61,32 @@ La respuesta incluye `id`, `titulo`, `autor`, `precio` e `img`. En `App.jsx` se 
 | **Flujo de compra (checkout)** | Botón "Finalizar compra" abre un modal con el resumen del pedido; al confirmar se limpia el carrito y se muestra un mensaje de éxito. |
 | **Buenas prácticas** | Estructura de carpetas por responsabilidad (`components/`, `utils/`) y código comentado. |
 
+## Capturas de pantalla
+
+### 1. Datos cargados dinámicamente (API pública + useEffect)
+
+Catálogo renderizado con los libros que llegan desde `https://dummyjson.com/c/0ca1-f66c-42d1-be14`. El botón muestra **"Agregar al carrito"** cuando el producto todavía no está en el carrito.
+
+![Catálogo con datos cargados dinámicamente desde la API pública](img/estado%20sin%20producto%20agregado.png)
+
+### 2. Carrito de compras funcionando
+
+Carrito con productos agregados: contador en la Navbar, cantidades, subtotal por ítem y **Total**.
+
+![Carrito de compras con productos agregados](img/carrito%20con%20producto.png)
+
+Carrito tras eliminar los productos: se activa el renderizado condicional del mensaje de carrito vacío.
+
+![Carrito de compras sin productos](img/carrito%20sin%20producto.png)
+
+### 3. Renderizado condicional en acción
+
+El mismo producto cambia el texto del botón de **"Agregar al carrito"** a **"✓ En el carrito"** según su estado.
+
+![Botón alternando a "En el carrito" por renderizado condicional](img/estado%20con%20producto%20agregado.png)
+
+> Otro ejemplo de renderizado condicional es el mensaje de carrito vacío de la captura anterior.
+
 ## Despliegue en GitHub Pages
 
 1. Asegúrate de que `base` en `vite.config.js` coincida con el nombre del repositorio.
